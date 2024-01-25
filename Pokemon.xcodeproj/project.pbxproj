@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		8173D3952B625A6B00DA8EC1 /* ItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173D3942B625A6B00DA8EC1 /* ItemCardView.swift */; };
+		8173D3972B62633400DA8EC1 /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173D3962B62633400DA8EC1 /* DataViewModel.swift */; };
+		8173D3992B62636A00DA8EC1 /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173D3982B62636A00DA8EC1 /* PokemonModel.swift */; };
+		8173D39C2B626AC900DA8EC1 /* JSonParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173D39B2B626AC900DA8EC1 /* JSonParsing.swift */; };
+		8173D39F2B62F3AF00DA8EC1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8173D39E2B62F3AF00DA8EC1 /* Kingfisher */; };
 		8196A7192B61866200F63398 /* PokemonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8196A7182B61866200F63398 /* PokemonApp.swift */; };
 		8196A71D2B61866600F63398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8196A71C2B61866600F63398 /* Assets.xcassets */; };
 		8196A7202B61866600F63398 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8196A71F2B61866600F63398 /* Preview Assets.xcassets */; };
@@ -16,6 +20,9 @@
 
 /* Begin PBXFileReference section */
 		8173D3942B625A6B00DA8EC1 /* ItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCardView.swift; sourceTree = "<group>"; };
+		8173D3962B62633400DA8EC1 /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
+		8173D3982B62636A00DA8EC1 /* PokemonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModel.swift; sourceTree = "<group>"; };
+		8173D39B2B626AC900DA8EC1 /* JSonParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSonParsing.swift; sourceTree = "<group>"; };
 		8196A7152B61866200F63398 /* Pokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8196A7182B61866200F63398 /* PokemonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonApp.swift; sourceTree = "<group>"; };
 		8196A71C2B61866600F63398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,12 +35,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8173D39F2B62F3AF00DA8EC1 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8173D39A2B626AB800DA8EC1 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				8173D39B2B626AC900DA8EC1 /* JSonParsing.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
 		8196A70C2B61866200F63398 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				8196A7182B61866200F63398 /* PokemonApp.swift */,
+				8173D39A2B626AB800DA8EC1 /* extension */,
 				8196A7292B6194ED00F63398 /* BasicData */,
 				8196A7282B6194C300F63398 /* ModelView */,
 				8196A7272B6194BC00F63398 /* View */,
@@ -75,6 +92,7 @@
 		8196A7262B6194B600F63398 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8173D3982B62636A00DA8EC1 /* PokemonModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -91,6 +109,7 @@
 		8196A7282B6194C300F63398 /* ModelView */ = {
 			isa = PBXGroup;
 			children = (
+				8173D3962B62633400DA8EC1 /* DataViewModel.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -118,6 +137,9 @@
 			dependencies = (
 			);
 			name = Pokemon;
+			packageProductDependencies = (
+				8173D39E2B62F3AF00DA8EC1 /* Kingfisher */,
+			);
 			productName = Pokemon;
 			productReference = 8196A7152B61866200F63398 /* Pokemon.app */;
 			productType = "com.apple.product-type.application";
@@ -146,6 +168,9 @@
 				Base,
 			);
 			mainGroup = 8196A70C2B61866200F63398;
+			packageReferences = (
+				8173D39D2B62F3AF00DA8EC1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 8196A7162B61866200F63398 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -172,8 +197,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8173D3972B62633400DA8EC1 /* DataViewModel.swift in Sources */,
+				8173D39C2B626AC900DA8EC1 /* JSonParsing.swift in Sources */,
 				8173D3952B625A6B00DA8EC1 /* ItemCardView.swift in Sources */,
 				8196A72B2B61954A00F63398 /* MainView.swift in Sources */,
+				8173D3992B62636A00DA8EC1 /* PokemonModel.swift in Sources */,
 				8196A7192B61866200F63398 /* PokemonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +406,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8173D39D2B62F3AF00DA8EC1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8173D39E2B62F3AF00DA8EC1 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8173D39D2B62F3AF00DA8EC1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8196A70D2B61866200F63398 /* Project object */;
 }

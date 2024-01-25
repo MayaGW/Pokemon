@@ -6,19 +6,20 @@
 //
 
 import SwiftUI
-
+import Kingfisher
 struct ItemCardView: View {
+    let pokemon: Pokemon
     var body: some View {
         HStack{
             VStack{
-                Text("Item name")
+                Text(pokemon.name)
                     .font(.system(size: 15, weight: .medium, design: .serif))
-                Text("Type")
+                Text(pokemon.type)
                     .font(.system(size: 20, weight: .semibold, design: .serif))
                     .background(.blue.opacity(0.5))
                     .cornerRadius(25)
             }
-            Image(.pokemon)
+            KFImage(URL(string: pokemon.imageUrl))
                 .resizable()
                 .frame(width: 70, height: 70, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .scaledToFill()
@@ -29,6 +30,6 @@ struct ItemCardView: View {
     }
 }
 
-#Preview {
-    ItemCardView()
-}
+//#Preview {
+//    ItemCardView()
+//}
