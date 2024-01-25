@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct MainView: View {
+    //property
+    var gridColumn: [GridItem] = [GridItem(.flexible()),GridItem(.flexible())]
+    
+    //body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            ScrollView(.vertical,showsIndicators: false){
+                LazyVGrid(columns: gridColumn){
+                    ForEach( 0..<20){ item in
+                        ItemCardView()
+                          
+                    }
+                }
+            }.navigationTitle("Pokemon")
+        }
     }
 }
 
