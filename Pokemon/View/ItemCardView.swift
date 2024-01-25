@@ -8,24 +8,30 @@
 import SwiftUI
 import Kingfisher
 struct ItemCardView: View {
+    @StateObject var vm = DataViewModel()
     let pokemon: Pokemon
     var body: some View {
         HStack{
             VStack{
                 Text(pokemon.name)
-                    .font(.system(size: 15, weight: .medium, design: .serif))
+                    .font(.footnote)
+                    .fontWeight(.medium)
+                
+                
                 Text(pokemon.type)
-                    .font(.system(size: 20, weight: .semibold, design: .serif))
-                    .background(.blue.opacity(0.5))
+                    .font(.system(size: 13, weight: .semibold, design: .serif))
+                    .padding()
+                    .background(.white.opacity(0.5))
                     .cornerRadius(25)
-            }
+                
+            }.padding(.horizontal,10)
             KFImage(URL(string: pokemon.imageUrl))
                 .resizable()
-                .frame(width: 70, height: 70, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .scaledToFill()
+                .frame(width: 70, height: 70, alignment: .center)
                 .padding(.trailing)
-        } .padding()
-          .background(.cyan.opacity(0.8))
+        } .padding(.vertical)
+            .background(Color(uiColor: vm.getColorFromType(type: pokemon.type)))
           .cornerRadius(12)
     }
 }
