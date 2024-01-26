@@ -22,12 +22,23 @@ struct MainView: View {
                     ForEach( vm.Pokemons){ item in
                         if filterByType != ""{
                             if item.type == filterByType{
-                                ItemCardView(pokemon: item)
-                                    .padding(3)
+                                NavigationLink {
+                                    DetailViewPokemon(pokemon: item)
+                                } label: {
+                                    ItemCardView(pokemon: item)
+                                        .padding(3)
+                                }
+
+                          
                             }}
                         else{
-                            ItemCardView(pokemon: item)
-                                .padding(3)
+                            NavigationLink {
+                                DetailViewPokemon(pokemon: item)
+                            } label: {
+                                ItemCardView(pokemon: item)
+                                    .padding(3)
+                            }
+
                         }
                     }
                 }
