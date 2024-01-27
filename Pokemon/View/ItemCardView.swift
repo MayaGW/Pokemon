@@ -30,7 +30,8 @@ struct ItemCardView: View {
                 .scaledToFill()
                 .frame(width: 70, height: 70, alignment: .center)
                 .padding(.trailing)
-        } .padding(.vertical)
+        }.foregroundColor(.white)
+        .padding(.vertical)
             .background(Color(uiColor: vm.getColorFromType(type: pokemon.type)))
           .cornerRadius(12)
     }
